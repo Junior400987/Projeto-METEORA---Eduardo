@@ -1,1 +1,32 @@
+Script Js Atualizado : 
 
+// Arquivo de Scripts - Otimizado e com boas práticas de manipulação do DOM
+
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("Meteora Build V2 - Sistema Responsivo Ativo.");
+
+    // Ajuste opcional: Controlar o tempo de rotação do carrossel do Bootstrap
+    const meuCarrossel = document.querySelector('#carouselMeteora');
+    if (meuCarrossel) {
+        const carouselInstance = new bootstrap.Carousel(meuCarrossel, {
+            interval: 4000, // Muda de slide a cada 4 segundos
+            wrap: true
+        });
+    }
+
+    // Validação educativa para a barra de pesquisa
+    const formBusca = document.querySelector('form[role="search"]');
+    if (formBusca) {
+        formBusca.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const input = formBusca.querySelector('.search-input');
+            const termo = input.value.trim();
+
+            if (termo !== "") {
+                console.log(`Pesquisando por: ${termo}`);
+                // Aqui entraria a lógica de integração com a API futuramente
+                input.value = "";
+            }
+        });
+    }
+});
