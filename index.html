@@ -1,1 +1,267 @@
+Codigo atualizado :
 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteora</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-custom">
+            <div class="container-fluid px-4 d-flex justify-content-between align-items-center">
+                <div class="navbar-brand-links">
+                    <img src="Links.png" alt="Meteora Links" class="img-fluid header-links-img">
+                </div>
+                
+                <form class="d-flex search-form-header" role="search" onsubmit="event.preventDefault();">
+                    <input class="form-control me-2 search-input" type="search" placeholder="Digite o produto" aria-label="Search">
+                    <button class="btn btn-search" type="submit">Buscar</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="carouselMeteora" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselMeteora" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselMeteora" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselMeteora" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="banner1.png" class="d-block w-100" alt="Meteora - Moda de impacto positivo">
+                </div>
+                <div class="carousel-item">
+                    <img src="banner2.png" class="d-block w-100" alt="Coleção Atemporal - Rosa">
+                </div>
+                <div class="carousel-item">
+                    <img src="banner3.png" class="d-block w-100" alt="Coleção Atemporal - Laranja">
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselMeteora" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselMeteora" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </div>
+    </main>
+
+    <section class="container py-5">
+        <h3 class="text-center mb-4 fw-bold text-white">Busque por categoria:</h3>
+        
+        <div class="row g-4 justify-content-center">
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="card category-card border-0 rounded-0">
+                    <img src="camiseta.png" class="card-img-top rounded-0" alt="Camisetas">
+                    <div class="card-footer bg-black text-white text-center rounded-0 border-0 py-2">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="card category-card border-0 rounded-0">
+                    <img src="bolsa.png" class="card-img-top rounded-0" alt="Bolsas">
+                    <div class="card-footer bg-black text-white text-center rounded-0 border-0 py-2">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="card category-card border-0 rounded-0">
+                    <img src="calcados.png" class="card-img-top rounded-0" alt="Calçados">
+                    <div class="card-footer bg-black text-white text-center rounded-0 border-0 py-2">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="card category-card border-0 rounded-0">
+                    <img src="calca.png" class="card-img-top rounded-0" alt="Calças">
+                    <div class="card-footer bg-black text-white text-center rounded-0 border-0 py-2">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="card category-card border-0 rounded-0">
+                    <img src="casaco.png" class="card-img-top rounded-0" alt="Casacos">
+                    <div class="card-footer bg-black text-white text-center rounded-0 border-0 py-2">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="card category-card border-0 rounded-0">
+                    <img src="oculos.png" class="card-img-top rounded-0" alt="Óculos">
+                    <div class="card-footer bg-black text-white text-center rounded-0 border-0 py-2">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container pb-5">
+        <h3 class="text-center mb-5 fw-bold text-white">Produtos que estão bombando!</h3>
+        
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            
+            <div class="col">
+                <div class="card product-card h-100 border-0 rounded-0">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=500&auto=format&fit=crop" class="card-img-top rounded-0" alt="Camiseta Conforto">
+                    <div class="card-body text-white p-3">
+                        <h5 class="card-title fw-bold">Camiseta Conforto</h5>
+                        <p class="card-text text-secondary small">Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex.</p>
+                        <p class="card-price fw-bold mb-3">R$ 70,00</p>
+                        <a href="#" class="btn btn-product-view rounded-0">Ver mais</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card product-card h-100 border-0 rounded-0">
+                    <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?q=80&w=500&auto=format&fit=crop" class="card-img-top rounded-0" alt="Calça Alfaiataria">
+                    <div class="card-body text-white p-3">
+                        <h5 class="card-title fw-bold">Calça Alfaiataria</h5>
+                        <p class="card-text text-secondary small">Modelo Wide Leg alfaiatada em linha. Uma peça pra vida toda!</p>
+                        <p class="card-price fw-bold mb-3">R$ 180,00</p>
+                        <a href="#" class="btn btn-product-view rounded-0">Ver mais</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card product-card h-100 border-0 rounded-0">
+                    <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=500&auto=format&fit=crop" class="card-img-top rounded-0" alt="Tênis Chunky">
+                    <div class="card-body text-white p-3">
+                        <h5 class="card-title fw-bold">Tênis Chunky</h5>
+                        <p class="card-text text-secondary small">Snicker casual com solado mais alto e marcações robustas. Modelo unissex.</p>
+                        <p class="card-price fw-bold mb-3">R$ 250,00</p>
+                        <a href="#" class="btn btn-product-view rounded-0">Ver mais</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card product-card h-100 border-0 rounded-0">
+                    <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=500&auto=format&fit=crop" class="card-img-top rounded-0" alt="Jaqueta Jeans">
+                    <div class="card-body text-white p-3">
+                        <h5 class="card-title fw-bold">Jaqueta Jeans</h5>
+                        <p class="card-text text-secondary small">Modelo unissex oversize com gola de camurça. Atemporal e autêntica!</p>
+                        <p class="card-price fw-bold mb-3">R$ 150,00</p>
+                        <a href="#" class="btn btn-product-view rounded-0">Ver mais</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card product-card h-100 border-0 rounded-0">
+                    <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=500&auto=format&fit=crop" class="card-img-top rounded-0" alt="Óculos Redondo">
+                    <div class="card-body text-white p-3">
+                        <h5 class="card-title fw-bold">Óculos Redondo</h5>
+                        <p class="card-text text-secondary small">Armação metálica em grafite com lentes arredondadas. Sem erro!</p>
+                        <p class="card-price fw-bold mb-3">R$ 120,00</p>
+                        <a href="#" class="btn btn-product-view rounded-0">Ver mais</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card product-card h-100 border-0 rounded-0">
+                    <img src="https://images.unsplash.com/photo-1584916201218-f4242ceb4809?q=80&w=500&auto=format&fit=crop" class="card-img-top rounded-0" alt="Bolsa coringa">
+                    <div class="card-body text-white p-3">
+                        <h5 class="card-title fw-bold">Bolsa coringa</h5>
+                        <p class="card-text text-secondary small">Bolsa casual em couro sintético de alta duração. Ideal para acompanhar você por uma vida!</p>
+                        <p class="card-price fw-bold mb-3">R$ 120,00</p>
+                        <a href="#" class="btn btn-product-view rounded-0">Ver mais</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       [NOVO] SEÇÃO: CONHEÇA TODAS AS NOSSAS FACILIDADES
+       ========================================================================== -->
+    <section class="section-facilities py-5">
+        <div class="container">
+            <h3 class="text-center mb-5 text-white facilities-main-title">Conheça todas as nossas facilidades</h3>
+            
+            <div class="row g-4 justify-content-center align-items-center">
+                <!-- Facilidade 1 -->
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-center gap-3 text-start px-3">
+                    <img src="x-diamond.png" alt="Ícone Pix" class="facility-icon">
+                    <div>
+                        <h5 class="facility-title fw-bold mb-1">PAGUE PELO PIX</h5>
+                        <p class="facility-text text-white mb-0">Ganhe 5% OFF em<br>pagamentos via PIX</p>
+                    </div>
+                </div>
+
+                <!-- Facilidade 2 -->
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-center gap-3 text-start px-3">
+                    <img src="arrow-repeat.png" alt="Ícone Troca" class="facility-icon">
+                    <div>
+                        <h5 class="facility-title fw-bold mb-1">TROCA GRÁTIS</h5>
+                        <p class="facility-text text-white mb-0">Fique livre para trocar em até<br>30 dias.</p>
+                    </div>
+                </div>
+
+                <!-- Facilidade 3 -->
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-center gap-3 text-start px-3">
+                    <img src="flower1.png" alt="Ícone Sustentabilidade" class="facility-icon">
+                    <div>
+                        <h5 class="facility-title fw-bold mb-1">SUSTENTABILIDADE</h5>
+                        <p class="facility-text text-white mb-0">Moda responsável, que respeita<br>o meio ambiente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       [NOVO] SEÇÃO: NEWSLETTER (CADASTRO)
+       ========================================================================== -->
+    <section class="container my-5 py-4 d-flex justify-content-center">
+        <div class="newsletter-box p-4 p-md-5 text-center">
+            <p class="newsletter-promo-text mb-4">
+                Quer receber nossas novidades, promoções exclusivas e 10% OFF na<br class="d-none d-md-block"> primeira compra? Cadastre-se!
+            </p>
+            <form class="d-flex justify-content-center align-items-center mx-auto newsletter-form" onsubmit="event.preventDefault();">
+                <input type="email" class="form-control rounded-0 input-newsletter-email" placeholder="Digite seu email" aria-label="Digite seu email" required>
+                <button class="btn rounded-0 btn-newsletter-send text-white" type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       [NOVO] RODAPÉ (FOOTER)
+       ========================================================================== -->
+    <footer class="bg-black py-3 border-top border-dark">
+        <div class="container text-center">
+            <p class="footer-credits mb-0 text-white-50 small">
+                2023 © Desenvolvido por Eduardo | Projeto fictício sem fins comerciais.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
