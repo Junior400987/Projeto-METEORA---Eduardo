@@ -1,235 +1,37 @@
-Css Atualizado : 
+        // 1. Lógica para atualizar o Modal de Detalhes dinamicamente
+        const modalProduto = document.getElementById('modalProdutoDetalhes');
+        if (modalProduto) {
+            modalProduto.addEventListener('show.bs.modal', event => {
+                // Elemento link "Ver mais" que disparou o modal
+                const botaoVerMais = event.relatedTarget;
+                
+                // Resgata os atributos de dados (data-*) cadastrados no HTML
+                const nome = botaoVerMais.getAttribute('data-nome');
+                const descricao = botaoVerMais.getAttribute('data-descricao');
+                const preco = botaoVerMais.getAttribute('data-preco');
+                const imagem = botaoVerMais.getAttribute('data-imagem');
+                
+                // injeta as informações dinamicamente nas IDs corretas do seu modal
+                document.getElementById('modalProdutoNome').textContent = nome;
+                document.getElementById('modalProdutoDescricao').textContent = descricao;
+                document.getElementById('modalProdutoPreco').textContent = preco;
+                
+                const imgModal = document.getElementById('modalProdutoImagem');
+                imgModal.src = imagem;
+                imgModal.alt = nome;
+            });
+        }
 
-/* ==========================================================================
-   PALETA DE CORES E CONFIGURAÇÕES GERAIS
-   ========================================================================== */
-:root {
-    --cor-preto-solido: #000000; /* Preto absoluto do seu mockup */
-    --cor-texto-clara: #FFFFFF;
-    --cor-roxo-botao: #9A4DFF; /* Tom roxo extraído dos botões do seu print */
-    --cor-verde-limao: #DAFF01; /* Cor extraída precisamente dos títulos do print image_cf3809.png */
-    --cor-roxo-newsletter: #9A4DFF; /* Cor de preenchimento do botão enviar */
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    
-    /* Configuração do Fundo de Tela Recebido */
-    background-image: url('🎨 Background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* Mantém o fundo fixo ao rolar a página */
-    background-color: var(--cor-preto-solido); /* Fallback de segurança */
-}
-
-/* ==========================================================================
-   HEADER & NAVBAR (100% PRETO SÓLIDO SEM BORDAS)
-   ========================================================================== */
-.navbar-custom {
-    background-color: var(--cor-preto-solido) !important; /* Força o preto plano */
-    padding-top: 15px !important;   /* Alinhamento vertical interno */
-    padding-bottom: 15px !important; 
-    border-bottom: none !important;  /* Remove qualquer linha divisória cinza */
-}
-
-/* Tamanho controlado da imagem dos menus (Links.png) */
-.header-links-img {
-    max-height: 28px;
-    width: auto;
-    display: block;
-}
-
-/* Input de Pesquisa da Barra de Busca */
-.search-input {
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    background-color: var(--cor-texto-clara);
-    color: var(--cor-preto-solido) !important;
-    border-radius: 0px; /* Cantos retos idênticos ao layout */
-    font-size: 0.9rem;
-    width: 200px;
-}
-
-.search-input::placeholder {
-    color: #6c757d;
-}
-
-/* Botão "Buscar" */
-.btn-search {
-    border: 1px solid var(--cor-texto-clara);
-    color: var(--cor-texto-clara);
-    background-color: transparent;
-    border-radius: 0px; /* Cantos retos */
-    padding: 0.375rem 1.2rem;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-}
-
-.btn-search:hover {
-    background-color: var(--cor-texto-clara);
-    color: var(--cor-preto-solido);
-}
-
-/* ==========================================================================
-   SEÇÃO DE CATEGORIAS (PREPARAÇÃO PARA IMAGENS COM BORDAS ORIGINAIS)
-   ========================================================================== */
-.category-card {
-    background-color: transparent !important; /* Mantém transparente para o fundo aparecer */
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-/* Efeito suave de zoom ao passar o mouse */
-.category-card:hover {
-    transform: scale(1.04);
-}
-
-/* Garante que as imagens locais caibam perfeitamente na proporção correta */
-.category-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    background-color: transparent !important;
-}
-
-/* Rodapé das categorias (Texto abaixo das imagens) */
-.category-card .card-footer {
-    font-size: 0.95rem;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-}
-
-/* ==========================================================================
-   SEÇÃO: PRODUTOS QUE ESTÃO BOMBANDO
-   ========================================================================== */
-.product-card {
-    background-color: rgba(0, 0, 0, 0.6) !important; /* Fundo escuro para os cards */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-5px); /* Efeito de levante ao passar o mouse */
-}
-
-/* Mantém todas as imagens dos produtos alinhadas com a mesma altura */
-.product-card img {
-    height: 380px;
-    object-fit: cover;
-    width: 100%;
-}
-
-.product-card .card-title {
-    font-size: 1.1rem;
-    margin-top: 5px;
-}
-
-.product-card .card-text {
-    line-height: 1.4;
-    height: 60px; /* Altura fixa para alinhar os botões perfeitamente */
-    overflow: hidden;
-}
-
-.product-card .card-price {
-    font-size: 1.2rem;
-}
-
-/* Botão "Ver mais" no tom de roxo exato do print */
-.btn-product-view {
-    background-color: var(--cor-roxo-botao) !important;
-    color: var(--cor-texto-clara) !important;
-    font-weight: 500;
-    padding: 8px 20px;
-    font-size: 0.95rem;
-    border: none;
-    transition: background-color 0.2s ease;
-    display: inline-block;
-}
-
-.btn-product-view:hover {
-    background-color: #8236EC !important; /* Roxo ligeiramente mais escuro no hover */
-}
-
-/* ==========================================================================
-   [NOVO] SEÇÃO: CONHEÇA TODAS AS NOSSAS FACILIDADES
-   ========================================================================== */
-.section-facilities {
-    background-color: var(--cor-preto-solido) !important; /* Fundo sólido plano preto */
-}
-
-.facilities-main-title {
-    font-size: 1.75rem;
-    letter-spacing: 0.5px;
-}
-
-.facility-icon {
-    width: 52px;
-    height: 52px;
-    object-fit: contain;
-}
-
-.facility-title {
-    color: var(--cor-verde-limao);
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
-}
-
-.facility-text {
-    font-size: 0.85rem;
-    line-height: 1.4;
-    opacity: 0.9;
-}
-
-/* ==========================================================================
-   [NOVO] SEÇÃO: NEWSLETTER (CAIXA COM BORDA DO COMPONENT)
-   ========================================================================== */
-.newsletter-box {
-    border: 1px solid #000000; /* Linha preta estrutural externa */
-    background-color: #FFFFFF; /* Fundo branco interno da caixa */
-    width: 100%;
-    max-width: 690px;
-}
-
-.newsletter-promo-text {
-    color: #333333;
-    font-size: 1.1rem;
-    font-weight: 400;
-    line-height: 1.4;
-}
-
-.newsletter-form {
-    max-width: 480px;
-}
-
-.input-newsletter-email {
-    border: 1px solid #757575 !important;
-    font-size: 0.95rem;
-    padding: 0.5rem 0.75rem;
-    color: #333333;
-}
-
-.input-newsletter-email::placeholder {
-    color: #888888;
-}
-
-.btn-newsletter-send {
-    background-color: var(--cor-roxo-newsletter) !important;
-    border: 1px solid var(--cor-roxo-newsletter) !important;
-    font-size: 0.95rem;
-    padding: 0.5rem 1.5rem;
-    transition: opacity 0.2s ease;
-}
-
-.btn-newsletter-send:hover {
-    opacity: 0.9;
-}
-
-/* ==========================================================================
-   [NOVO] SEÇÃO: RODAPÉ (REGRAS EXCLUSIVAS)
-   ========================================================================== */
-.footer-credits {
-    font-size: 0.8rem;
-    letter-spacing: 0.5px;
-}
+        // 2. Lógica Opcional: Intercepta o envio da Newsletter para exibir o Modal de Sucesso
+        const formNewsletter = document.getElementById('formNewsletter');
+        if (formNewsletter) {
+            formNewsletter.addEventListener('submit', event => {
+                event.preventDefault(); // Impede o recarregamento da página
+                
+                // Instancia e abre o modal de sucesso da newsletter
+                const modalSucesso = new bootstrap.Modal(document.getElementById('modalSucessoNewsletter'));
+                modalSucesso.show();
+                
+                formNewsletter.reset(); // Limpa o campo de e-mail
+            });
+        }
