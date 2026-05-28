@@ -5,15 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meteora</title>
     
-    <!-- LINKS DE ESTILO: Bootstrap e Arquivo CSS Local -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ==========================================================================
-       PARTE 1: CABEÇALHO (BARRA DE NAVEGAÇÃO E BUSCA)
-       ========================================================================== -->
     <header>
         <nav class="navbar-custom">
             <div class="container-fluid px-4 d-flex justify-content-between align-items-center">
@@ -29,13 +25,9 @@
         </nav>
     </header>
 
-    <!-- ==========================================================================
-       PARTE 2: CARROSSEL DE BANNERS (MUDANÇA AUTOMÁTICA E BARRAS CLICKÁVEIS)
-       ========================================================================== -->
     <main>
         <div id="carouselMeteora" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
             
-            <!-- BARRAS DE PROGRESSO INTERATIVAS -->
             <div class="carousel-indicators custom-indicators">
                 <button type="button" data-bs-target="#carouselMeteora" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
                     <span class="indicator-progress-fill"></span>
@@ -48,7 +40,6 @@
                 </button>
             </div>
 
-            <!-- Imagens do Carrossel -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="./Banner-Principal/banner1.png" class="d-block w-100" alt="Meteora - Moda de impacto positivo">
@@ -61,7 +52,6 @@
                 </div>
             </div>
 
-            <!-- Setas de Controle Laterais -->
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselMeteora" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
@@ -73,9 +63,6 @@
         </div>
     </main>
 
-    <!-- ==========================================================================
-       PARTE 3: SEÇÃO DE CATEGORIAS
-       ========================================================================== -->
     <section class="container py-5">
         <h3 class="text-center mb-4 fw-bold text-dark section-main-title">Busque por categoria:</h3>
         
@@ -84,7 +71,7 @@
                 <div class="card category-card border-0 rounded-0">
                     <img src="./Style/Banner-Principal/Icones-Verde/camiseta.png" class="card-img-top rounded-0" alt="Camisetas">
                     <div class="card-footer bg-black text-white text-center rounded-0 border-0 py-2 small">
-                      
+                        Camisetas
                     </div>
                 </div>
             </div>
@@ -93,7 +80,7 @@
                 <div class="card category-card border-0 rounded-0">
                     <img src="./Style/Banner-Principal/Icones-Verde/bolsa.png" class="card-img-top rounded-0" alt="Bolsas">
                     <div class="card-footer bg-black text-white text-center rounded-0 border-0 py-2 small">
-                        
+                        Bolsas
                     </div>
                 </div>
             </div>
@@ -102,7 +89,7 @@
                 <div class="card category-card border-0 rounded-0">
                     <img src="./Style/Banner-Principal/Icones-Verde/calcados.png" class="card-img-top rounded-0" alt="Calçados">
                     <div class="card-footer bg-black text-white text-center rounded-0 border-0 py-2 small">
-                      
+                        Calçados
                     </div>
                 </div>
             </div>
@@ -111,7 +98,7 @@
                 <div class="card category-card border-0 rounded-0">
                     <img src="./Style/Banner-Principal/Icones-Verde/calca.png" class="card-img-top rounded-0" alt="Calças">
                     <div class="card-footer bg-black text-white text-center rounded-0 border-0 py-2 small">
-                       
+                        Calças
                     </div>
                 </div>
             </div>
@@ -120,7 +107,7 @@
                 <div class="card category-card border-0 rounded-0">
                     <img src="./Style/Banner-Principal/Icones-Verde/calca.png" class="card-img-top rounded-0" alt="Casacos">
                     <div class="card-footer bg-black text-white text-center rounded-0 border-0 py-2 small">
-                        
+                        Casacos
                     </div>
                 </div>
             </div>
@@ -129,16 +116,13 @@
                 <div class="card category-card border-0 rounded-0">
                     <img src="./Style/Banner-Principal/Icones-Verde/oculos.png" class="card-img-top rounded-0" alt="Óculos">
                     <div class="card-footer bg-black text-white text-center rounded-0 border-0 py-2 small">
-                        
+                        Óculos
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==========================================================================
-       PARTE 4: SEÇÃO DE PRODUTOS
-       ========================================================================== -->
     <section class="container pb-5">
         <h3 class="text-center mb-5 fw-bold text-dark section-main-title">Produtos que estão bombando!</h3>
         
@@ -150,7 +134,13 @@
                         <h5 class="card-title fw-bold text-dark">Camiseta Conforto</h5>
                         <p class="card-text text-dark small mb-2">Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex.</p>
                         <p class="card-price fw-bold text-dark mb-3">R$ 70,00</p>
-                        <a href="#" class="btn btn-product-view rounded-0">Ver mais</a>
+                        <a href="#" class="btn btn-product-view rounded-0 btn-ver-detalhes"
+                           data-bs-toggle="modal" 
+                           data-bs-target="#modalProdutoDetalhes"
+                           data-nome="Camiseta Conforto"
+                           data-descricao="Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex."
+                           data-preco="R$ 70,00"
+                           data-imagem="./Roupa-Destaques/camisetaconforto.png">Ver mais</a>
                     </div>
                 </div>
             </div>
@@ -162,7 +152,13 @@
                         <h5 class="card-title fw-bold text-dark">Calça Alfaiataria</h5>
                         <p class="card-text text-dark small mb-2">Modelo Wide Leg alfaiatada em linha. Uma peça pra vida toda!</p>
                         <p class="card-price fw-bold text-dark mb-3">R$ 180,00</p>
-                        <a href="#" class="btn btn-product-view rounded-0">Ver mais</a>
+                        <a href="#" class="btn btn-product-view rounded-0 btn-ver-detalhes"
+                           data-bs-toggle="modal" 
+                           data-bs-target="#modalProdutoDetalhes"
+                           data-nome="Calça Alfaiataria"
+                           data-descricao="Modelo Wide Leg alfaiatada em linha. Uma peça pra vida toda!"
+                           data-preco="R$ 180,00"
+                           data-imagem="./Roupa-Destaques/calcaafiataria.png">Ver mais</a>
                     </div>
                 </div>
             </div>
@@ -174,7 +170,13 @@
                         <h5 class="card-title fw-bold text-dark">Tênis Chunky</h5>
                         <p class="card-text text-dark small mb-2">Snicker casual com solado mais alto e marcações robustas. Modelo unissex.</p>
                         <p class="card-price fw-bold text-dark mb-3">R$ 250,00</p>
-                        <a href="#" class="btn btn-product-view rounded-0">Ver mais</a>
+                        <a href="#" class="btn btn-product-view rounded-0 btn-ver-detalhes"
+                           data-bs-toggle="modal" 
+                           data-bs-target="#modalProdutoDetalhes"
+                           data-nome="Tênis Chunky"
+                           data-descricao="Snicker casual com solado mais alto e marcações robustas. Modelo unissex."
+                           data-preco="R$ 250,00"
+                           data-imagem="./Roupa-Destaques/tenischuck.png">Ver mais</a>
                     </div>
                 </div>
             </div>
@@ -186,7 +188,13 @@
                         <h5 class="card-title fw-bold text-dark">Jaqueta Jeans</h5>
                         <p class="card-text text-dark small mb-2">Modelo unissex oversize com gola de camurça. Atemporal e autêntica!</p>
                         <p class="card-price fw-bold text-dark mb-3">R$ 150,00</p>
-                        <a href="#" class="btn btn-product-view rounded-0">Ver mais</a>
+                        <a href="#" class="btn btn-product-view rounded-0 btn-ver-detalhes"
+                           data-bs-toggle="modal" 
+                           data-bs-target="#modalProdutoDetalhes"
+                           data-nome="Jaqueta Jeans"
+                           data-descricao="Modelo unissex oversize com gola de camurça. Atemporal e autêntica!"
+                           data-preco="R$ 150,00"
+                           data-imagem="./Roupa-Destaques/jaquetajeans.png">Ver mais</a>
                     </div>
                 </div>
             </div>
@@ -198,7 +206,13 @@
                         <h5 class="card-title fw-bold text-dark">Óculos Redondo</h5>
                         <p class="card-text text-dark small mb-2">Armação metálica em grafite com lentes arredondadas. Sem erro!</p>
                         <p class="card-price fw-bold text-dark mb-3">R$ 120,00</p>
-                        <a href="#" class="btn btn-product-view rounded-0">Ver mais</a>
+                        <a href="#" class="btn btn-product-view rounded-0 btn-ver-detalhes"
+                           data-bs-toggle="modal" 
+                           data-bs-target="#modalProdutoDetalhes"
+                           data-nome="Óculos Redondo"
+                           data-descricao="Armação metálica em grafite com lentes arredondadas. Sem erro!"
+                           data-preco="R$ 120,00"
+                           data-imagem="./Roupa-Destaques/oculosredondo.png">Ver mais</a>
                     </div>
                 </div>
             </div>
@@ -210,64 +224,118 @@
                         <h5 class="card-title fw-bold text-dark">Bolsa coringa</h5>
                         <p class="card-text text-dark small mb-2">Bolsa casual em couro sintético de alta duração. Ideal para acompanhar você por uma vida!</p>
                         <p class="card-price fw-bold text-dark mb-3">R$ 120,00</p>
-                        <a href="#" class="btn btn-product-view rounded-0">Ver mais</a>
+                        <a href="#" class="btn btn-product-view rounded-0 btn-ver-detalhes"
+                           data-bs-toggle="modal" 
+                           data-bs-target="#modalProdutoDetalhes"
+                           data-nome="Bolsa coringa"
+                           data-descricao="Bolsa casual em couro sintético de alta duração. Ideal para acompanhar você por uma vida!"
+                           data-preco="R$ 120,00"
+                           data-imagem="./Roupa-Destaques/bolsacoringa.png">Ver mais</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==========================================================================
-       PARTE 5: SEÇÃO DE IMAGEM DE REDES SOCIAIS
-       ========================================================================== -->
     <section class="section-facilities py-5">
         <div class="container text-center">
             <img src="./BackGround/pix.png" alt="Facilidades" class="img-fluid mx-auto d-block">
         </div>
     </section>
 
-    <!-- ==========================================================================
-       PARTE 6: NEWSLETTER (CHAMA O MODAL AO CLICAR EM ENVIAR)
-       ========================================================================== -->
     <section class="container my-5 py-5 d-flex justify-content-center align-items-center">
         <div class="newsletter-box text-center">
             <p class="newsletter-promo-text">
                 Quer receber nossas novidades, promoções exclusivas e 10% OFF na<br class="d-none d-md-block"> primeira compra? Cadastre-se!
             </p>
-            <form class="d-flex justify-content-center align-items-stretch mx-auto newsletter-form" onsubmit="event.preventDefault();">
+            <form id="formNewsletter" class="d-flex justify-content-center align-items-stretch mx-auto newsletter-form">
                 <input type="email" class="form-control rounded-0 input-newsletter" placeholder="Digite seu email" aria-label="Digite seu email" required>
-                <!-- Atributos data-bs-toggle e data-bs-target adicionados para acionar o modal -->
-                <button class="btn rounded-0 btn-newsletter-send text-white" type="submit" data-bs-toggle="modal" data-bs-target="#modalSucessoNewsletter">Enviar</button>
+                <button class="btn rounded-0 btn-newsletter text-white" type="submit">Enviar</button>
             </form>
         </div>
     </section>
 
-
-//foto okay
-
-
-<div class="modal fade" id="modalSucessoNewsletter" tabindex="-1" aria-labelledby="modalSucessoLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered custom-modal-width">
-        <div class="modal-content custom-modal-content">
-            <div class="modal-header custom-modal-header d-flex align-items-center justify-content-between">
-                <div class="d-flex align-items-center gap-2">
-                    <span class="custom-success-icon d-flex align-items-center justify-content-center">
-                        <img src="./Okay-Email/Okay.png"Ok" width="16" height="16" style="object-fit: contain;">
-                    </span>
-                    <h5 class="modal-title text-white fw-medium m-0" id="modalSucessoLabel">E-mail cadastrado com sucesso!</h5>
+    <div class="modal fade" id="modalSucessoNewsletter" tabindex="-1" aria-labelledby="modalSucessoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered custom-modal-width">
+            <div class="modal-content custom-modal-content border-0 rounded-0">
+                <div class="modal-header bg-black text-white custom-modal-header d-flex align-items-center justify-content-between border-0 rounded-0 p-3">
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="custom-success-icon d-flex align-items-center justify-content-center">
+                            <img src="./Okay-Email/Okay.png" alt="Ok" width="20" height="20" style="object-fit: contain;">
+                        </span>
+                        <h5 class="modal-title text-white fw-medium m-0 fs-6" id="modalSucessoLabel">E-mail cadastrado com sucesso!</h5>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <button type="button" class="btn-close btn-close-white custom-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body custom-modal-body text-start">
-                Em breve você receberá novidades exclusivas da Meteora.
+                <div class="modal-body bg-white text-dark custom-modal-body text-start p-3 rounded-0 fs-6">
+                    Em breve você receberá novidades exclusivas da Meteora.
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-    <!-- ==========================================================================
-       PARTE 7: RODAPÉ
-       ========================================================================== -->
+    <div class="modal fade" id="modalProdutoDetalhes" tabindex="-1" aria-labelledby="modalProdutoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 rounded-0">
+                <div class="modal-header bg-black text-white border-0 rounded-0 p-3">
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="custom-success-icon d-flex align-items-center justify-content-center">
+                            <img src="./Okay-Email/Okay.png" alt="Ok" width="20" height="20" style="object-fit: contain;">
+                        </span>
+                        <h5 class="modal-title text-white fw-medium m-0 fs-6" id="modalProdutoLabel">Confira detalhes sobre o produto</h5>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body bg-white text-dark p-4 rounded-0">
+                    <div class="row g-4">
+                        <div class="col-12 col-md-5 text-center">
+                            <img id="modalProdutoImagem" src="" alt="" class="img-fluid" style="max-height: 350px; object-fit: cover;">
+                        </div>
+                        <div class="col-12 col-md-7 d-flex flex-column justify-content-between">
+                            <div>
+                                <h4 id="modalProdutoNome" class="fw-bold mb-2 fs-5"></h4>
+                                <p id="modalProdutoDescricao" class="text-muted small mb-3"></p>
+                                <hr class="my-3">
+                                <h3 id="modalProdutoPreco" class="fw-bold mb-1 fs-4 text-dark"></h3>
+                                <span class="text-black-50 small mb-4 d-block">Vendido e entregue por Meteora</span>
+                                
+                                <div class="mb-3">
+                                    <label class="fw-bold small d-block mb-2">Cores:</label>
+                                    <div class="d-flex gap-3 align-items-center">
+                                        <div class="form-check form-check-inline p-0 m-0">
+                                            <input class="form-check-input d-none" type="radio" name="optionsCores" id="cor1" checked>
+                                            <label class="form-check-label rounded-circle" for="cor1" style="width: 20px; height: 20px; background-color: #7952b3; cursor: pointer; border: 2px solid #fff; outline: 2px solid #7952b3;"></label>
+                                        </div>
+                                        <div class="form-check form-check-inline p-0 m-0">
+                                            <input class="form-check-input d-none" type="radio" name="optionsCores" id="cor2">
+                                            <label class="form-check-label rounded-circle" for="cor2" style="width: 20px; height: 20px; background-color: #f8f9fa; cursor: pointer; border: 1px solid #ccc;"></label>
+                                        </div>
+                                        <div class="form-check form-check-inline p-0 m-0">
+                                            <input class="form-check-input d-none" type="radio" name="optionsCores" id="cor3">
+                                            <label class="form-check-label rounded-circle" for="cor3" style="width: 20px; height: 20px; background-color: #000; cursor: pointer; border: 1px solid #000;"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label class="fw-bold small d-block mb-2">Tamanho:</label>
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-sm btn-outline-secondary rounded-0 px-2 py-1 small active">P</button>
+                                        <button class="btn btn-sm btn-outline-secondary rounded-0 px-2 py-1 small">PP</button>
+                                        <button class="btn btn-sm btn-outline-secondary rounded-0 px-2 py-1 small">M</button>
+                                        <button class="btn btn-sm btn-outline-secondary rounded-0 px-2 py-1 small">G</button>
+                                        <button class="btn btn-sm btn-outline-secondary rounded-0 px-2 py-1 small">GG</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-dark w-100 rounded-0 text-white fw-medium" data-bs-dismiss="modal">Adicionar à sacola</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="bg-black py-3 border-top border-dark">
         <div class="container text-center">
             <p class="footer-credits mb-0 text-white-50 small">
@@ -276,7 +344,46 @@
         </div>
     </footer>
 
-    <!-- Scripts do Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // 1. Lógica para atualizar o Modal de Detalhes dinamicamente
+        const modalProduto = document.getElementById('modalProdutoDetalhes');
+        if (modalProduto) {
+            modalProduto.addEventListener('show.bs.modal', event => {
+                // Elemento link "Ver mais" que disparou o modal
+                const botaoVerMais = event.relatedTarget;
+                
+                // Resgata os atributos de dados (data-*) cadastrados no HTML
+                const nome = botaoVerMais.getAttribute('data-nome');
+                const descricao = botaoVerMais.getAttribute('data-descricao');
+                const preco = botaoVerMais.getAttribute('data-preco');
+                const imagem = botaoVerMais.getAttribute('data-imagem');
+                
+                // injeta as informações dinamicamente nas IDs corretas do seu modal
+                document.getElementById('modalProdutoNome').textContent = nome;
+                document.getElementById('modalProdutoDescricao').textContent = descricao;
+                document.getElementById('modalProdutoPreco').textContent = preco;
+                
+                const imgModal = document.getElementById('modalProdutoImagem');
+                imgModal.src = imagem;
+                imgModal.alt = nome;
+            });
+        }
+
+        // 2. Lógica Opcional: Intercepta o envio da Newsletter para exibir o Modal de Sucesso
+        const formNewsletter = document.getElementById('formNewsletter');
+        if (formNewsletter) {
+            formNewsletter.addEventListener('submit', event => {
+                event.preventDefault(); // Impede o recarregamento da página
+                
+                // Instancia e abre o modal de sucesso da newsletter
+                const modalSucesso = new bootstrap.Modal(document.getElementById('modalSucessoNewsletter'));
+                modalSucesso.show();
+                
+                formNewsletter.reset(); // Limpa o campo de e-mail
+            });
+        }
+    </script>
 </body>
 </html>
